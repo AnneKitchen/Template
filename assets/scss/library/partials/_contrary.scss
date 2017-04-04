@@ -1,0 +1,24 @@
+.contrary {
+    position: relative;
+    display: flex;
+    min-height: 40%;
+    padding: 1em;
+    flex-direction: row;
+
+    #subject {
+        justify-content: space-around;
+        display: flex;
+        position: relative;
+        width: calc(100% - 2em);
+
+        #input,
+        #output {
+            text-align: center;
+            margin: 1em auto;
+            display: inline-flex;
+            position: relative;
+            height: auto;
+            width: 40%;
+        }
+    }
+}

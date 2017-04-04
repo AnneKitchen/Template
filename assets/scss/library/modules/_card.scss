@@ -1,0 +1,78 @@
+.card,
+.card.mini {
+    display: flex;
+    position: relative;
+    min-height: 70%;
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+    flex-flow: wrap;
+
+    .card-block {
+        margin: 1em;
+        transition: all 0.3s;
+        display: inline-flex;
+        position: relative;
+        width: 17%;
+        height: 20em;
+        border-radius: 2em;
+        box-shadow: 2px 2px 6px rgba($black, .7);
+
+        .content {
+            @include column;
+            display: flex;
+            width: 100% !important;
+            position: relative;
+            padding: 1em 0.5em !important;
+
+            icon {
+                font-size: $title-l;
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+            }
+        }
+
+        &:nth-child(1) {
+            background-color: $blue;
+        }
+
+        &:nth-child(2) {
+            background-color: $pitch;
+        }
+
+        &:nth-child(3) {
+            background-color: $tea;
+        }
+
+        &:nth-child(4) {
+            background-color: $egg;
+        }
+
+        &:nth-child(5) {
+            background-color: $coffee;
+        }
+    }
+}
+
+.card.mini {
+    min-height: auto;
+
+    .card-block {
+        height: 8em !important;
+        width: 8em;
+
+        .content {
+            padding: 0.5em;
+            margin: auto;
+        }
+
+        &.active {
+            box-shadow: 3px 3px 15px rgba($black , .8);
+        }
+    }
+}

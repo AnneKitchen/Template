@@ -1,0 +1,47 @@
+@import "https://limeishu.org.tw/assets/css/font.css";
+$fontStyle: (title $title-xl) (subtitle $subtitle-l) (contents $content-xl) (footnote $footnote);
+@each $style in $fontStyle {
+    $class: nth($style, 1);
+    $size: nth($style, 2);
+    h1.#{$class} {
+        text-align: center;
+        font-size: $size;
+        display: block;
+        margin: 0 auto;
+    }
+    h2.#{$class} {
+        text-align: center;
+        font-size: $size * 0.8;
+        display: block;
+        margin: 0 auto;
+    }
+    h3.#{$class} {
+        text-align: center;
+        font-size: $size * 0.7;
+        display: block;
+        margin: 0 auto;
+    }
+    p.#{$class} {
+        text-align: center;
+        font-size: $size * 0.6;
+        display: block;
+        margin: 0 auto;
+    }
+    a {
+      text-align: center;
+    }
+    @media screen and (max-width: 768px){
+      h1.#{$class} {
+        font-size: $size * 0.8;
+      }
+      h2.#{$class} {
+        font-size: $size * 0.7;
+      }
+      h3.#{$class} {
+        font-size: $size * 0.4;
+      }
+      p.#{$class} {
+        font-size: $size * 0.2;
+      }
+    }
+}

@@ -1,0 +1,199 @@
+#welcome {
+	z-index: 0;
+	color: $white;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	background-color: $yellow;
+	.container {
+		z-index: 2;
+		color: $black;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 40vw;
+		height: 100%;
+		&:before {
+			z-index: 1;
+			content: '';
+			position: absolute;
+			display: block;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-color: $light-yellow transparent transparent transparent;
+			border-width: 100vh 20vw 0 0;
+			left: 40vw;
+			top: 0;
+			filter: drop-shadow(3px 0 3px rgba($black, .3));
+			clip: rect(0, 40vw, 100vh, 0);
+			-webkit-clip-path: rect(0, 40vw, 100vh, 0);
+			clip-path: rect(0, 40vw, 100vh, 0);
+			transform: scale(1, -1);
+		}
+		&:after {
+			z-index: 2;
+			background: url("/assets/images/material-dark.svg");
+			-webkit-clip-path: polygon(40% 100%, 50% 50%, 60% 100%);
+			clip-path: polygon(40% 100%, 50% 50%, 60% 100%);
+			clip: polygon(40% 100%, 50% 50%, 60% 100%);
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: center center;
+			background-size: fixed;
+			content: '';
+			display: block;
+			position: absolute;
+			width: 100vw;
+			height: 100vh;
+			left: 0;
+			top: 0;
+			opacity: .25;
+		}
+		header {
+			z-index: 10;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			padding: 1em;
+			border-radius: 1em;
+			&:before {
+				z-index: 10;
+				content: '';
+				position: absolute;
+				display: block;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-color: $white transparent transparent transparent;
+				border-width: 100vh 20vw 0 0;
+				left: 40vw;
+				top: 0;
+				filter: drop-shadow(3px 0 3px rgba($black, .3));
+				clip: rect(0, 40vw, 100vh, 0);
+				-webkit-clip-path: rect(0, 40vw, 100vh, 0);
+				clip-path: rect(0, 40vw, 100vh, 0);
+			}
+			&:after {
+				z-index: 11;
+				background: url("/assets/images/material-color.svg");
+				-webkit-clip-path: polygon(40% 100%, 40% 0%, 60% 0%);
+				clip: polygon(40% 100%, 40% 0%, 60% 0%);
+				clip-path: polygon(40% 100%, 40% 0%, 60% 0%);
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-position: center center;
+				background-size: fixed;
+				content: '';
+				display: block;
+				position: absolute;
+				width: 100vw;
+				height: 100vh;
+				left: 0;
+				top: 0;
+				opacity: .5;
+			}
+			img.logo {
+				z-index: 100;
+				width: 12em;
+				height: 12em;
+				margin: 1em;
+			}
+			.content {
+				filter: drop-shadow(0 0 3px rgba($black, .3));
+				z-index: 1000;
+				display: flex;
+				flex-direction: column;
+				h1 {
+					text-align: center;
+					justify-content: center;
+					display: flex;
+					font-size: $title-l * 1.25;
+					font-weight: 200;
+				}
+				p {
+					justify-content: center;
+					font-weight: 400;
+					display: flex;
+					font-size: $subtitle-l * 0.8;
+					border-bottom: 0.1px solid $black;
+				}
+				.link {
+					margin: .5em 0;
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					li {
+						transition: all .3s;
+						display: inline-flex;
+						justify-content: center;
+						align-items: center;
+						width: 2em;
+						height: 2em;
+						border-radius: 2em;
+						border: 1px solid $black;
+						a {
+							line-height: 2em;
+							width: 2em;
+							height: 2em;
+							color: $black;
+						}
+						&:hover {
+							transition: all .3s;
+							background-color: $black;
+							a {
+								color: $white;
+							}
+						}
+					}
+				}
+				.button {
+					color: $black;
+					border-color: $black;
+					border-radius: 0;
+					margin: 0;
+					&:hover {
+						color: $white;
+						background-color: $black;
+					}
+				}
+			}
+		}
+	}
+	&:before {
+		background: url("/assets/images/material.svg"), linear-gradient(to right, $white 40%, transparent 50%);
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center center;
+		background-size: contain;
+		content: '';
+		display: block;
+		position: absolute;
+		height: 100%;
+		left: 0;
+		top: 0;
+		width: 100%;
+	}
+	&:after {
+		z-index: 1;
+		background: url("/assets/images/material-color.svg");
+		background-color: $white;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center center;
+		background-size: fixed;
+		content: '';
+		display: block;
+		position: absolute;
+		height: 100%;
+		left: 0;
+		top: 0;
+		width: 40vw;
+		opacity: .55;
+	}
+}

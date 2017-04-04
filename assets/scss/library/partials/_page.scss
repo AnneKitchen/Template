@@ -1,0 +1,15 @@
+.page {
+    display: flex;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+$pageStyle: (init $white) (dark $black) (special $red);
+@each $style in $pageStyle {
+    $class: nth($style, 1);
+    $color: nth($style, 2);
+    .page.#{$class} {
+        background-color: $color;
+        padding: 3em 0 0 0;
+    }
+}

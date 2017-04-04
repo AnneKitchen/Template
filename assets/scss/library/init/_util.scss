@@ -1,0 +1,37 @@
+//font-size
+$title-xl: 2.5rem;
+$title-l: 2rem;
+$title-m: 1.2rem;
+$title-s: .8rem;
+$subtitle-l: 1.2rem;
+$subtitle-m: 1rem;
+$subtitle-s: .5rem;
+$content-xl: 1rem;
+$content-l: .8rem;
+$content-m: .5rem;
+$content-s: .2rem;
+$footnote: .5rem;
+//color-config
+//pure
+$white: #F9F8F7;
+$black: rgb(13, 14, 15);
+$light-gray: #86838B;
+$gray: rgb(28, 28, 28);
+$blue: rgb(0, 133, 181);
+$dark-blue: rgb(0, 54, 74);
+$green: rgba(14, 163, 163, 1);
+$dark-green: rgba(67, 116, 20, 1);
+$yellow: #FDC061;
+$dark-yellow: #E6AF58;
+$light-yellow: #FBDCAC;
+$orange: rgba(221, 141, 71, 1);
+$pink: rgb(239, 71, 111);
+$red: #F8625C;
+$glass: rgba(156, 193, 90, 1);
+$tea: rgba(105, 187, 105, 1);
+$egg: rgba(255, 200, 92, 1);
+$coffee: rgba(161, 130, 118, 1);
+$pitch: rgba(232, 93, 117, 1);
+//alpha
+$gray-alpha: rgba(29, 29, 29, .5);
+$orange-alpha: rgba(221, 141, 71, .75);

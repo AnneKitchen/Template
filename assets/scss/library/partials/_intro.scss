@@ -1,0 +1,127 @@
+#intro {
+	position: relative;
+	display: flex; // min-height: 100vh;
+	width: 100vw;
+	height: auto;
+	flex-direction: column;
+	background-color: $white;
+	.container {
+		header {
+			height: auto;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			display: flex;
+			padding-top: 5em;
+			height: calc(30vh - 5em);
+		}
+		.wrapper {
+			@media screen and (max-width: 480px) {
+				height: auto;
+			}
+			color: $white;
+			background-color: $black;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			height: 70vh;
+			position: relative;
+			flex-wrap: wrap;
+			:nth-child(1) {
+				width: 40%;
+				flex-direction: row;
+			}
+			:nth-child(3),
+			:nth-child(4) {
+				width: 50%;
+				flex-direction: row-reverse;
+			}
+			:nth-child(2) {
+				width: 60%;
+				flex-direction: row;
+			}
+			.spotlight {
+				@media screen and (max-width: 480px) {
+					width: 100% !important;
+					height: auto;
+					&:nth-child(odd) {
+						flex-direction: row;
+					}
+					&:nth-child(even) {
+						flex-direction: row-reverse;
+					}
+				}
+				display: inline-flex;
+				height: 50%;
+				position: relative;
+				img {
+					display: none;
+				}
+				.image {
+					display: flex;
+					height: 100%;
+					width: 40%;
+					background-size: cover;
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+				.content {
+					@media screen and (max-width: 480px) {
+						height: calc(100% - .5em * 2);
+						width: calc(60% - .5em * 2);
+						padding: .5em;
+						h1 {
+							padding: 1em 0 !important;
+						}
+						p {
+							width: calc(100% - .5em * 2) !important;
+							margin: .5em !important;
+						}
+					}
+					display: flex;
+					height: calc(100% - 1em * 2);
+					width: calc(60% - 1em * 2);
+					justify-content: center;
+					flex-direction: column;
+					align-items: center;
+					padding: 1em;
+					h1 {
+						margin: 0;
+						display: flex;
+						padding-top: 2em;
+						padding-bottom: .5em;
+						font-size: $subtitle-l;
+						width: 100%;
+						display: flex;
+						justify-content: center;
+					}
+					p {
+						font-size: $content-l * 1.2;
+						margin: auto 2em;
+						display: flex;
+						width: calc(100% - 2em * 2);
+						text-indent: 2em;
+						word-wrap: break-word;
+					}
+				}
+				$bgStyleList: (red $red) (green $green) (blue $blue) (yellow $yellow);
+				@each $bgStyle in $bgStyleList {
+					$class: nth($bgStyle, 1);
+					$color: nth($bgStyle, 2);
+					&.#{$class} {
+						.content {
+							background-color: $color;
+						}
+						.image:before {
+							content: '';
+							height: 100%;
+							width: 40%;
+							position: absolute;
+							background-color: rgba($color, .5);
+						}
+					}
+				}
+			}
+		}
+	}
+}
